@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/to_do/to_do_line_commands.gd" type="Script" id=1]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+anchor_right = 1.0
+margin_bottom = 24.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Index" type="LineEdit" parent="."]
+margin_right = 58.0
+margin_bottom = 24.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+
+[node name="Function" type="LineEdit" parent="."]
+margin_left = 62.0
+margin_right = 120.0
+margin_bottom = 24.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Task" type="LineEdit" parent="."]
+margin_left = 124.0
+margin_right = 486.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+custom_colors/cursor_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+caret_blink = true
+
+[node name="File" type="LineEdit" parent="."]
+margin_left = 490.0
+margin_right = 853.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+
+[node name="Line Num" type="LineEdit" parent="."]
+margin_left = 857.0
+margin_right = 915.0
+margin_bottom = 24.0
+custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
+
+[node name="Done" type="Button" parent="."]
+margin_left = 919.0
+margin_right = 965.0
+margin_bottom = 24.0
+text = "Done"
+
+[node name="Delete" type="Button" parent="."]
+margin_left = 969.0
+margin_right = 1024.0
+margin_bottom = 24.0
+text = "Delete"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="text_changed" from="Index" to="." method="_on_Index_text_changed"]
+[connection signal="text_changed" from="Function" to="." method="_on_Function_text_changed"]
+[connection signal="text_entered" from="File" to="." method="_on_File_text_entered"]
+[connection signal="pressed" from="Done" to="." method="_on_Done_pressed"]
+[connection signal="pressed" from="Delete" to="." method="_on_Delete_pressed"]

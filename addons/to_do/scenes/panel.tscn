@@ -1,0 +1,100 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/to_do/new_entry.gd" type="Script" id=1]
+
+[node name="ScrollContainer" type="ScrollContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+grow_vertical = 2
+rect_clip_content = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 20.0
+text = "+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 1024.0
+margin_bottom = 48.0
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_right = 58.0
+margin_bottom = 24.0
+text = "Priority"
+editable = false
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="LineEdit2" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_left = 62.0
+margin_right = 120.0
+margin_bottom = 24.0
+text = "Type"
+editable = false
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="LineEdit3" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_left = 124.0
+margin_right = 486.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Task"
+editable = false
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="LineEdit4" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_left = 490.0
+margin_right = 853.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Script"
+editable = false
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="LineEdit5" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_left = 857.0
+margin_right = 928.0
+margin_bottom = 24.0
+text = "Line No. "
+editable = false
+expand_to_text_length = true
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="Del All" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 932.0
+margin_right = 1008.0
+margin_bottom = 24.0
+text = "Delete All"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 1012.0
+margin_right = 1026.0
+margin_bottom = 24.0
+
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer" method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Del All" to="VBoxContainer" method="_on_Del_All_pressed"]
