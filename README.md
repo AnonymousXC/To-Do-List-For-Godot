@@ -17,6 +17,12 @@
         <li>Press Enter on Script to open the file and put line number to goto that line.</li>
         <li>Enjoy!!😊🔥</li>
     </ul>
-
+    <h2>About Me.</h2>
+    <p>I am an 15 years old :- </p>
+    <ul>
+      <li>Indie Game Developer</li>
+      <li>Indie Web Developer</li>
+      <li>Indie App Developer</li>
+    </ul>
 </body>
 </html>
