@@ -1,21 +1,19 @@
-tool
+@tool
 extends EditorPlugin
 
-
-const main_panel = preload("res://addons/to_do/scenes/panel.tscn")
 
 var panel_instance 
 
 
 func _enter_tree():
-	panel_instance = main_panel.instance()
-	get_editor_interface().get_editor_viewport().add_child(panel_instance)
-	make_visible(false)
+	panel_instance = preload("res://addons/to_do/scenes/panel.tscn").instantiate()
+	self.add_control_to_bottom_panel(panel_instance, "To Do")
+	make_visible(true)
 
 
 func _exit_tree():
 	if panel_instance:
-		panel_instance.queue_free()
+		self.remove_control_from_bottom_panel(panel_instance)
 
 
 func make_visible(visible):
