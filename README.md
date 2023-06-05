@@ -17,8 +17,18 @@
         <li>Press Enter on Script to open the file and put line number to goto that line.</li>
         <li>Enjoy!!😊🔥</li>
     </ul>
+    <h2>Updates :-</h2>
+    <ul>
+        <li>Supports Godot 4. <br>
+        </li>
+        <li>Opens on the lower dock.</li>
+        <li>Added new keywords in type.</li>
+        <li>Removed unused buttons.</li>
+        <li>Removed unused buttons. </li>
+        <li>Added tooltips. </li>
+    </ul>
     <h2>About Me.</h2>
-    <p>I am an 12< x >17 years old </p>
+    <p>I am an 15< x >=17 years old </p>
     <ul>
       <li>Indie Game Developer</li>
       <li>Indie Web Developer</li>
